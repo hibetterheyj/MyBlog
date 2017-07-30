@@ -19,3 +19,6 @@ script:
 branches:
   only:
     - raw
+cache:
+  directories:
+    - _hexo/node_modules
