@@ -42,7 +42,7 @@ Preload 是这样问题的一个新的解决方案：
 
 使用 `<link>` 标签设置需要的预加载的元素。
 
-- rel：`rel="preload"`
+- rel：`preload`
 - href：用来定义需要 Preload 的资源。
 - as：用来指定资源的类型，使浏览器能够确定优先级、根据资源类型发送合适的 `Accept headers`、判断资源能否复用。
 
@@ -66,7 +66,7 @@ Preload 是这样问题的一个新的解决方案：
 <link rel="preload" href="MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-> 需要注意，字体即使符合同源策略也需要加上 crossorigin 属性，除非你的字体使用 data URI 加载。图片同理。
+> 需要注意，字体即使符合同源策略也需要加上 crossorigin 属性。
 
 - JS 的只加载而不执行
 
@@ -82,13 +82,13 @@ document.head.appendChild(preload);
 <link rel="preload" as="script" href="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.min.js">
 ```
 
-- 基于标签的异步加载
+- 基于标签实现的 css 异步加载
 
 ```html
 <link rel="preload" as="style" href="async_style.css" onload="this.rel='stylesheet'">
 ```
 
-> 渲染整个页面的重要 css 不建议用这种方式引入，如果 css 加载过慢或者 onload 不能及时触发将会导致页面抖动。
+> 渲染页面框架的重要 css 不建议异步引入；如果 css 加载过慢或者 onload 不能及时触发会导致页面抖动。
 
 - 响应式加载
 
@@ -101,7 +101,7 @@ document.head.appendChild(preload);
 
 Server Push 是 HTTP2 的一项新特性。当客户端请求 HTML 文件时，服务端同时将其它重要资源随 HTML 在同一个资源中一并发送给用户。这样不仅节省了请求，还避免了重要资源阻塞了页面渲染和加载。
 
-![0000123.png](//img-nfz.b0.upaiyun.com/0000123.png)
+![0000123.png](https://img-nfz.b0.upaiyun.com/0000123.png)
 
 在目前 W3C 的草案中使用了 Link Preload 响应头标记 Server Push。你可以看到页面响应类似如下所示的 Header：
 
@@ -109,15 +109,15 @@ Server Push 是 HTTP2 的一项新特性。当客户端请求 HTML 文件时，�
 Link: </app/script.js>; rel=preload; as=script
 ```
 
-> 目前 Nginx 尚不支持 Server Push，在 Apache 中支持 Server Push 但是需要 `mod_http2` 的配置中 `H2Push On`，然后通过添加 Header  `Header add Link "</css/styles.css>;rel=preload"` 的方法启用 Server Push。在不支持 Server Push 的 WebServer 上添加该响应头，不过是让服务端而不是 HTML 标记 Preloa、让浏览器提前执行预加载罢了。
+> 目前 Nginx 尚不支持 Server Push，在 Apache 中支持 Server Push 但是需要 `mod_http2` 的配置中 `H2Push On`，然后通过添加 Header  `Header add Link "</css/styles.css>;rel=preload"` 的方法启用 Server Push。在不支持 Server Push 的 WebServer 上添加该响应头，不过是通过让服务端响应头、而不是通过 HTML 标记 Preload、从而可以让浏览器提前执行预加载罢了。
 
 从某种意义上讲，Server Push 就是更激进、更主动的 Preload。
 
 # 兼容性
 
-![0000123.png](//img-nfz.b0.upaiyun.com/0000124.png)
+![0000123.png](https://img-nfz.b0.upaiyun.com/0000124.png)
 
-根据 CanIUse 上的数据表明，支持 Preload 的浏览器并不多，只占到了 53%。但是试想到 2015 年、Preload 的草案刚刚出来时、还没有任何浏览器表态支持这项技术，不得不感叹 Web 技术的日新月异啊。·
+根据 CanIUse 上的数据表明，目前支持 Preload 的浏览器并不多，只占到了 53% 。但是试想在 2015 年、Preload 的草案刚刚出来时、甚至还没有任何浏览器表态支持这项技术，我们不得不感叹 Web 技术的日新月异啊。
 
 ----
 
