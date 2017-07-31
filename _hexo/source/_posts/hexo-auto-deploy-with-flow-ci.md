@@ -8,19 +8,19 @@ categories:
   - 博客栈
 date: 2016-12-01 13:40:16
 updated: 2016-12-01 13:40:16
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/hexo-auto-deploy-with-flow.ci.png!blogth
+thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/hexo-auto-deploy-with-Flow.CI.png!blogth
 ---
 
-[Flow.ci](https://flow.ci)是一个由著名移动应用公测平台[Fir.im](https://fir.im)推出的持续集成（CI）的saas服务平台，感觉就是中国的Travis.CI，作用是把你Github或者Coding上的代码拉过来，通过容器技术自动化完成代码的构建、测试、交付和部署。整个对Flow.ci使用下来的感受就是简洁和美观，配置方便，速度很快。
+[Flow.CI](https://Flow.CI) 是一个由著名移动应用公测平台 [Fir.im](https://fir.im) 推出的持续集成（CI）的 saas 服务平台，感觉就是中国的 Travis.CI，作用是把你 Github 或者 Coding 上的代码拉过来，通过容器技术自动化完成代码的构建、测试、交付和部署。整个对 Flow.CI 使用下来的感受就是简洁和美观，配置方便，速度很快。
 
 <!--more-->
 
-虽然内测阶段我没有拿到邀请码，但是我至少参加了公测。目前Flow.CI依然在公测，所以依旧免费。跟Daocloud的代码构建相比，Flow.ci是更纯粹的持续集成/部署平台。
+虽然内测阶段我没有拿到邀请码，但是我至少参加了公测。目前 Flow.CI 依然在公测，所以依旧免费。跟Daocloud的代码构建相比，Flow.CI 是更纯粹的持续集成/部署平台。
 
 # 基本思路
 
-- 关闭daocloud持续集成功能
-- 配置flow.ci持续集成
+- 关闭 Daocloud 持续集成功能
+- 配置Flow.CI持续集成
 - 增加触发器
 - 在本地提交Hexo主项目修改的`git commit`进行测试。
 
@@ -31,11 +31,11 @@ thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/hexo-auto-deploy-with-flo
 
 # 创建持续集成项目
 
-这一步很简单，按照flow.ci控制台里面的按钮顺着点“创建项目”->选择CODING代码托管库->选择你的用户->选择你的项目。完成！
+这一步很简单，按照Flow.CI控制台里面的按钮顺着点“创建项目”->选择CODING代码托管库->选择你的用户->选择你的项目。完成！
 
 这时CODING里面的项目会有两处变化：
 
-- 新增了flow.ci的webhook
+- 新增了Flow.CI的webhook
 - 新增了项目下的部署公钥（只读）
 
 # 创建并设置工作流
@@ -51,7 +51,7 @@ thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/hexo-auto-deploy-with-flo
 触发器自然是选择对所有分支的Push、对所有的Tag进行匹配。当然你也可以设置每天定时运行。
 
 ## 初始化
-保持默认即可，初始环境变量（flow.ci提供）和Node.js的组件版本等信息。
+保持默认即可，初始环境变量（Flow.CI提供）和Node.js的组件版本等信息。
 
 ## Git 仓库克隆
 保持默认即可，拉取你的仓库。
@@ -99,8 +99,8 @@ flow_cmd "hexo d" --echo
 然后写一篇博客（庆祝一下你配置了Flow.CI嘛），然后用`git commit`和`git push`推送到你的仓库，看一下你的Flow.CI是否开始了自动运行。
 
 # 小结
-本文介绍了从Daocloud进行持续集成/部署改造为flow.ci进行集成/部署的过程，今后的使用和之前的方式一样，向仓库提交push就可以触发自动部署。
-和Daocloud的代码构建相比，flow.ci为持续集成/部署优点如下：
+本文介绍了从Daocloud进行持续集成/部署改造为Flow.CI进行集成/部署的过程，今后的使用和之前的方式一样，向仓库提交push就可以触发自动部署。
+和Daocloud的代码构建相比，Flow.CI为持续集成/部署优点如下：
 
 - 更简单、直观的方式，更容易理解（但是并不像配置一个yml那样Geek，对吧？）
 - 更加丰富的触发方式（比如支持正则表达式匹配commit信息）
