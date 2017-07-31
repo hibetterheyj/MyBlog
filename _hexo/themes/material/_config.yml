@@ -10,7 +10,7 @@ head:
     keywords: "neoFelhz, neofelhz, blog, hexo, Android, WPO, Web"
     site_verification:
         google: "o1-IzSRJ5n6Bn_94myQyxyyETTy4HFuJePSeemMT0Tc"
-        baidu:
+        baidu: "The fucking Baidu like eating shit very much"
 
     # Enable generate structured-data as JSON+LD for SEO or not.
     #        Set as 'false' if it cause some wrong when `hexo g`.
@@ -33,14 +33,14 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "我愿回溯选择 选择与象牙塔的幻影相错 承受注定的偏颇"
+    slogan: "所有羁绊终归于平淡 誓言悉数臣服命运的安排"
     theme_color: "#546E7A"
     theme_sub_color: "#424242"
     hyperlink_color: "#607D8B"
     button_color: "#546E7A"
     android_chrome_color: "#455A64"
     nprogress_color: "#212121"
-    nprogress_buffer: "400"
+    nprogress_buffer: "500"
 
 # JS Effect Switches
 js_effect:
@@ -70,10 +70,10 @@ background:
 
 # Images Settings
 img:
-    logo: "https://m-nfz.b0.upaiyun.com/favicon.png"
-    avatar: "https://m-nfz.b0.upaiyun.com/img/avatar-m.png"
-    daily_pic: "//m-nfz.b0.upaiyun.com/img/tower.jpg!blogth"
-    sidebar_header: "//m-nfz.b0.upaiyun.com/img/sidebar.jpg!blogth"
+    logo: "//m-nfz.b0.upaiyun.com/favicon.png"
+    avatar: "//m-nfz.b0.upaiyun.com/img/avatar-m.png"
+    daily_pic: "//m-nfz.b0.upaiyun.com/img/sidebar.jpg!blogth"
+    sidebar_header: "//m-nfz.b0.upaiyun.com/img/unification.png!blogth"
     footerico: "//m-nfz.b0.upaiyun.com/img/footer/footer_ico-"
     random_thumbnail: "//m-nfz.b0.upaiyun.com/img/random/material-"
     footer_image:
@@ -141,7 +141,7 @@ license: "本文使用 <a rel='nofollow noopener' href='https://creativecommons.
 toc:
 #   use: choose whether the line_number of toc will show or not.
 #       Available value of "linenumber": true | false
-    linenumber: false
+    linenumber: true
 
 # SNS Menu
 sns:
@@ -223,16 +223,19 @@ sidebar:
 
 # Comment Systems
 # Available value of "use":
-#     disqus | disqus_click | changyan | 163gentie | livere(laibili)
+#     disqus | disqus_click | changyan | livere | gitment
+# If you want to use gitment,you should get the client_id and client_secret form https://github.com/settings/applications/new
 comment:
     use: disqus_click
     shortname: neofelhzblog
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    gentie_productKey:
-    gentie_thread_key_type: path # path | id
     livere_data_uid:
+    gitment_repo:   # git repo of the hexo
+    gitment_owner:  # git repo's owne
+    gitment_client_id:  # github app client id
+    gitment_client_secret :  # github app client secret
 
 # Search Systems
 # Available value:
@@ -245,8 +248,9 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    use:
-    site_id:
+    google_site_id:
+    baidu_site_id:
+    cnzz_site_id:
 
 # Leancloud Views
 leancloud:
@@ -270,7 +274,7 @@ vendors:
 #   You can load theme unique files from your private cdn or oss.
 #   The new src will have the base domain you configured below.
 #   For example
-#       materialcdn: https://cdn.example.com
+#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
     materialcdn: https://m-nfz.b0.upaiyun.com
 
 # Third party library
@@ -278,9 +282,9 @@ vendors:
 #   For example
 #       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
     # jQuery 2.2.0
-    jquery: https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js
+    jquery:
     # nprogress 0.2.0
-    nprogress: https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js
+    nprogress:
     # FontAwesome 4.5.0
     fontawesome:
     # MathJax 2.7.0-2.7.1
@@ -288,4 +292,4 @@ vendors:
     # Prettify r298 (only prettify.js)
     prettify:
     # Material Icons 3.0.1
-    material_icons: https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css
+    material_icons:

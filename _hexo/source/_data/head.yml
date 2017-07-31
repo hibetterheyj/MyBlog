@@ -1,2 +1,4 @@
 PWA:
   <link rel="manifest" href="/static/manifest.2.json">
+PRISM:
+  <style id="prism_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prism_css","https://m-nfz.b0.upaiyun.com/static/css/prism.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>

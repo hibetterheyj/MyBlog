@@ -5,3 +5,4 @@ _hexo/*.log
 _hexo/node_modules/
 _hexo/public/
 _hexo/.deploy*/
+_hexo/themes/material-old/

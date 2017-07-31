@@ -2,13 +2,13 @@
 <% if(theme.vendors.materialcdn) { %>
     <%- jsLsload({path:(theme.vendors.materialcdn + '/js/lazyload.min.js'),key:'lazyload_js'}) %>
 <% } else { %>
-    <%- jsLsload({path:(config.root + 'js/lazyload.min.js'),key:'lazyload_js'}) %>
+    <%- jsLsload({path:('js/lazyload.min.js'),key:'lazyload_js'}) %>
 <% } %>
 
 <% if(theme.vendors.materialcdn) { %>
     <%- jsLsload({path:(theme.vendors.materialcdn + '/js/js.min.js'),key:'js_js'}) %>
 <% } else { %>
-    <%- jsLsload({path:(config.root + 'js/js.min.js'),key:'js_js'}) %>
+    <%- jsLsload({path:('js/js.min.js'),key:'js_js'}) %>
 <% } %>
 
 <%- partial('_widget/nprogress') %>
@@ -17,7 +17,7 @@
     <% if(theme.vendors.materialcdn) { %>
         <%- jsLsload({path:(theme.vendors.materialcdn + '/js/smoothscroll.js'),key:'sm_js'}) %>
     <% } else { %>
-        <%- jsLsload({path:(config.root + 'js/smoothscroll.js'),key:'sm_js'}) %>
+        <%- jsLsload({path:('js/smoothscroll.js'),key:'sm_js'}) %>
     <% } %>
 <% } %>
 
@@ -63,8 +63,10 @@
     <% if ( (is_post()) ) { %>
         <% if(theme.vendors.prettify) { %>
             <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
+        <% } else if(theme.vendors.materialcdn) { %>
+            <%- jsLsload({path:(theme.vendors.materialcdn + '/js/prettify.min.js'),key:'prettify_js'}) %>
         <% } else { %>
-            <%- jsLsload({path:(config.root + 'js/prettify.min.js'),key:'prettify_js'}) %>
+            <%- jsLsload({path:('js/prettify.min.js'),key:'prettify_js'}) %>
         <% } %>
     <% } %>
 <% } %>
@@ -91,6 +93,16 @@
 <% if (page.mathjax) { %>
     <%- partial('_widget/mathjax') %>
 <% } %>
+
+<!-- Bing Background -->
+<% if(theme.background.bing.enable) { %>
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
+    });
+</script>
+<% } %>
+
 <script type="text/ls-javascript" id="lazy-load">
     // Offer LazyLoad
     queue.offer(function(){
@@ -106,15 +118,6 @@
         },200);
     });
 </script>
-
-<!-- Bing Background -->
-<% if(theme.background.bing.enable) { %>
-<script type="text/ls-javascript" id="Bing-Background-script">
-    queue.offer(function(){
-        $('body').attr('data-original', 'https://api.i-meto.com/bing?<%= theme.background.bing.parameter %>');
-    });
-</script>
-<% } %>
 
 <!-- Custom Footer -->
 
