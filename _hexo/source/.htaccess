@@ -6,14 +6,11 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 
 Header always set Content-Security-Policy "upgrade-insecure-requests"
 
-<FilesMatch "\.(png|jpg|gif|svg|webp|css|woff|woff2|eot|ttf|ico)$">
-Header set Cache-Control "max-age=864000"
+<FilesMatch "\.(png|jpg|gif|svg|webp|woff|woff2|eot|ttf|ico)$">
+Header set Cache-Control "max-age=86400"
 </FilesMatch>
 
 <FilesMatch "\.(html|htm)$">
 Header always set Content-Type "text/html; charset=utf-8"
-Header add Link "<https://piwik.nfz.moe>; rel=preconnect; crossorigin"
 Header add Link "<https://m-nfz.b0.upaiyun.com>; rel=preconnect; crossorigin"
-Header add Link "<https://cdn.bootcss.com>; rel=preconnect; crossorigin"
-Header set Cache-Control "max-age=200"
 </FilesMatch>
