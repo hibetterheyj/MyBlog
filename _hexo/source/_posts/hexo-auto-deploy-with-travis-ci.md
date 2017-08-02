@@ -3,11 +3,13 @@ title: 使用 Travis CI 持续构建 Hexo
 tags:
   - Hexo
   - CI
+  - 持续集成
 categories:
   - 博客栈
 date: 2017-7-31 23:28:00
 updated: 2017-7-31 23:28:00
-description: 鉴于使用 Hexo 部署网站的繁琐性，本文介绍了如何使用 Travis CI来完成 Hexo 的持续构建。
+description: 鉴于使用 Hexo 部署网站的繁琐性，我将通过本文介绍如何使用 Travis CI 来完成 Hexo 的持续构建。
+thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/hexo-auto-deploy-with-travis-ci.png!blogth
 ---
 
 我已经写了三篇关于如何使用 CI 持续构建 Hexo 的文章了，现在我将博客迁移到 GitHub 上托管，所以就需要使用 Travis CI 完成持续构建了。
@@ -23,7 +25,7 @@ description: 鉴于使用 Hexo 部署网站的繁琐性，本文介绍了如何�
 # 建立 Repo
 
 根据《[随时随地 Hexo——我是如何使用 Hexo 的](https://blog.nfz.moe/archives/use-hexo-at-any-time-any-place.html)》一文，你应该使用 Git 管理你的 Hexo 工程文件。
-- 新建一个分支 `raw`，用来存放你的 Hexo 工程文件。将 `raw` 分支 push 到 GitHub 上。
+新建一个分支 `raw`，用来存放你的 Hexo 工程文件。将 `raw` 分支 push 到 GitHub 上。
 
 如果你不想使用 SSH 的方式完成 Hexo 的 Deploy 的话，你可以使用——
 
@@ -102,7 +104,7 @@ travis login
 安装 Travis 命令行工具并登陆。
 
 ```
-travis encrypt 'GitHubKEY=<这里填入你生成的 Token>' --add
+travis encrypt 'GitHubKEY=< 这里填入你生成的 Token >' --add
 ```
 
 上面命令会在 `.travis.yml` 中添加如下内容：
@@ -113,4 +115,4 @@ env:
     secure: QAH+/EIDC/Jg...
 ```
 
-上面的一长串字符串就是加密后的环境变量。之后，在 Travis 执行脚本时，就可以直接使用该环境变量了。在 `.travis.yml` 里完成 `env` 的定义，你就不需要在 Travis CI 后台配置 `GitHubKEY` 变量了。
+上面的一长串字符串就是加密后的环境变量。之后，在 Travis 执行脚本时，就可以直接使用该环境变量了。由于已经在 `.travis.yml` 里完成 `env` 的定义，你就不需要在 Travis CI 后台配置 `GitHubKEY` 变量了。
