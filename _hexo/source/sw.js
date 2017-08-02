@@ -67,7 +67,7 @@
     });
 
     /* ContentCache */ 
-    self.toolbox.router.get("/archives/(.*).html(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/archives/(.*).html(.*)", self.toolbox.networkFirst, {
         cache: {
             name: contentCacheName,
             maxEntries: maxEntries
