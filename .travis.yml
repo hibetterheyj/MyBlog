@@ -3,8 +3,6 @@ dist: trusty
 node_js:
   - "7"
 install:
-  - npm install hexo-cli -g
-  - npm install gulp -g
   - cd _hexo
   - npm install
   - npm install hexo-prism-plugin@2.1.0 --save
@@ -12,9 +10,7 @@ script:
   - chmod +x ../patch.sh
   - chmod +x ../deploy.sh
   - ../patch.sh > /dev/null
-  - hexo clean
-  - hexo g
-  - gulp
+  - npm run build
   - ../deploy.sh > /dev/null
 branches:
   only:

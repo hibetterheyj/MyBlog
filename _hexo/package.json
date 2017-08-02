@@ -8,7 +8,7 @@
     "server": "hexo s",
     "clean": "hexo clean",
     "compress": "gulp",
-    "build": "hexo g && gulp"
+    "build": "hexo clean && hexo g && gulp"
   },
   "hexo": {
     "version": "3.3.8"
