@@ -1,5 +1,2 @@
-ServiceWorker:
-  <script>if('serviceWorker'in navigator){navigator.serviceWorker.register('/sw.js')};
-  window.addEventListener('beforeinstallprompt', event => {event.userChoice.then(result => {console.log(result.outcome)})})</script>
 GoogleAnalytics:
-  <script>lsloader.load("ana_js","https://m-nfz.b0.upaiyun.com/static/js/ana.js", true)</script>
+  <script>lsloader.load("ana_js","/static/js/ana.js", true)</script>
