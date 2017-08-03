@@ -1,2 +1,2 @@
-GoogleAnalytics:
-  <script>lsloader.load("ana_js","/static/js/ana.js", true)</script>
+GoogleAnalytics_ServiceWorker:
+  <script>lsloader.load("ana_js","https://m-nfz.b0.upaiyun.com/static/js/ana.js", true)</script>
