@@ -103,7 +103,7 @@ travis login
 
 安装 Travis 命令行工具并登陆。
 
-```
+```bash
 travis encrypt 'GitHubKEY=< 这里填入你生成的 Token >' --add
 ```
 
