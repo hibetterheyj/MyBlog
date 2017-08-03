@@ -6,9 +6,9 @@
     var maxEntries = 100;
     self.importScripts("https://m-nfz.b0.upaiyun.com/static/js/sw-toolbox.js");
     self.toolbox.options.debug = false;
-    self.toolbox.options.networkTimeoutSeconds = 2;
+    self.toolbox.options.networkTimeoutSeconds = 4;
     /* staticImageCache */
-    self.toolbox.router.get("/img/(.*)", self.toolbox.cacheFirst, {
+    self.toolbox.router.get("/img/(.*)", self.toolbox.fastest, {
         origin: /m-nfz\.b0\.upaiyun\.com/,
         cache: {
             name: staticImageCacheName,
@@ -51,7 +51,7 @@
     self.toolbox.router.get("/js/(.*)", self.toolbox.networkOnly, {
         origin: /m-nfz\.b0\.upaiyun\.com/,
     });
-    self.toolbox.router.get("/static/(.*)", self.toolbox.networkFirst, {
+    self.toolbox.router.get("/static/(.*)", self.toolbox.networkOnly, {
         origin: /m-nfz\.b0\.upaiyun\.com/,
         cache: {
             name: staticAssetsCacheName,
