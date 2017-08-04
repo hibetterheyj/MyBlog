@@ -14,9 +14,6 @@
     "version": "3.3.8"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-htmlclean": "^2.7.14",
-    "gulp-htmlmin": "^3.0.0",
     "hexo": "^3.3.8",
     "hexo-cli": "^1.0.3",
     "hexo-filter-auto-spacing": "^0.2.1",
@@ -33,5 +30,10 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlclean": "^2.7.14",
+    "gulp-htmlmin": "^3.0.0"
   }
 }

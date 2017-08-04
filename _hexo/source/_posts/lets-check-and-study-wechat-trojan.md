@@ -77,7 +77,7 @@ updated: 2017-01-23 23:47:00
 
 <img src="https://p0.ssl.qhmsg.com/t018e52590d13737e9a.png" alt="0000009.png" style="width:50%" />
 
-![0000018.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvcs8q1kj30wm061aa7.jpg)
+![0000018.png](https://p0.ssl.qhmsg.com/t01cedd34ff12d84b79.png)
 
 实际效果像这样（由 DBIn_K 提供截图）：
 
@@ -96,7 +96,7 @@ updated: 2017-01-23 23:47:00
 
 再对其进行反编译，查看里面到底有什么猫腻。
 
-![0000019.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvd5gc6ij30810l2wfb.jpg)
+![0000019.png](https://p0.ssl.qhmsg.com/t01b9d49c27efa8be60.png)
 
 查看里面的文件目录树可以看出来同样是内置了一套悬浮窗的样式，除此以外还内置了一套微信登录界面的样式。
 同样只摘录一段给大家看看就行：

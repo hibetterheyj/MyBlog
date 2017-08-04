@@ -127,8 +127,8 @@ toc: false
 
 > **以下是目前为止与魅族官方人员对话的截图：**
 
-![0000113.png](https://ws1.sinaimg.cn/large/006p1CKwly1fg73xq7rrdj30k8075q3k.jpg)
-![0000111.png](https://ws1.sinaimg.cn/large/006p1CKwly1fg73xx1njoj30k80ky0uv.jpg)
+![0000113.png](https://p0.ssl.qhmsg.com/t01d2d5a4812c8572b5.png)
+![0000111.png](https://p0.ssl.qhmsg.com/t010b49bfffb28223d9.png)
 ![0000112.png](https://p0.ssl.qhmsg.com/t0140142e8ff6151396.png)
 
 ----
