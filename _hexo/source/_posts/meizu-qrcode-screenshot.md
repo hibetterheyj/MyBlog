@@ -32,7 +32,7 @@ toc: false
 
 在**反色**之后，它就是一个实实在在的二维码了：
 
-<img src="https://ws1.sinaimg.cn/large/006p1CKwly1fg73x8eylzj30u00vi3ym.jpg" style="width:50%" alt="0000102.png" />
+<img src="https://p0.ssl.qhmsg.com/t018160dfe13d009c43.png" style="width:50%" alt="0000102.png" />
 
 识别结果是(为保护隐私，本文字符串中部分字符用「*」号代替)：
 

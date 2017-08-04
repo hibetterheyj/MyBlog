@@ -139,7 +139,7 @@ updated: 2017-01-23 23:47:00
 
 > 更新：获取这些数据是为了微信跨设备登陆，具体参见 0x07。
 
-![0000020.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvdidcknj30830h7gmd.jpg)
+![0000020.png](https://p0.ssl.qhmsg.com/t01109f670d2a9cc50f.png)
 
 现在来看他病毒核心的 smali，粗略一看，里面值得我们关注的主要是三个部分，一个是基于 google 开发的解析 json 的框架 gson，一个是由 Jakewharton 开发的 DiskLruCache 缓存，一个是 loopj 开发的 android-async-http。这几个就是用来把获取到的数据传回作者的服务器。
 本来我可以直接一个一个看 smali ，直到找到他数据回源的域名，但是后来 DBin_K 直接开了抓包，拿到了数据回源的地址：`uu636.com/update.aspx`。所以我就没有继续看下去。
@@ -158,8 +158,8 @@ updated: 2017-01-23 23:47:00
 2. 从百度贴吧可以获得的公开的资料得知，这个团伙从今年年初就已经开始作案（几次病毒的行为都高度相似），已经有将近十名受害者被骗。
 3. 查询一下这个域名的 Whois 信息可以看到，这个域名是在国内购买的，同时启用了域名 Whois 隐私保护，所以查不到域名所有人的信息。
 
-![0000025.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvxuqscnj30nj06ajrv.jpg)
-![0000026.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvy6trdxj30nr0ckgmm.jpg)
+![0000025.png](https://p0.ssl.qhmsg.com/t017b12d98429a8f566.png)
+![0000026.png](https://p0.ssl.qhmsg.com/t01a7f1983c05285152.png)
 
 根据全网 ping 的响应速度，的确应该是靠近国内地区的服务器。但是又找不到备案信息，所以这个服务器应该是在香港（我用我朋友在香港沙田机房的 VPS ping 了一下发现耗时是 0ms，结果不言而喻）
 5. 在酷友 [llllllllllll666](http://www.coolapk.com/u/554126) 和酷安的开发组成员 [liubaoyua](http://www.coolapk.com/u/346976) 对病毒的逆向下获得了 java 部分。详见 0x08。
@@ -170,19 +170,19 @@ updated: 2017-01-23 23:47:00
 
 - 劫持微信快捷方式
 
-![0000043.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvfj20fnj30lq0g1wh2.jpg)
+![0000043.png](https://p0.ssl.qhmsg.com/t01523dd061f0de1d1c.png)
 
 代码如图，当获取到 root 权限以后木马核心会开始寻找启动器下的微信的快捷方式劫持到自己的桌面活动 `com.android.append.Launcher.Activity`，这样受害者点击微信你图标也会触发打开伪造的登陆界面。
 
 - 卸载微信
 
-![0000044.jpg](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvg5kowqj30br0kw3z5.jpg)
+![0000044.jpg](https://p0.ssl.qhmsg.com/t011ca4ad52b42e5395.jpg)
 
 这个就简单了，仅仅只是卸载微信而已。
 
 - 一键变砖
 
-![0000042.png](https://ws1.sinaimg.cn/large/006p1CKwly1ffqvgrypgoj30j6070wf0.jpg)
+![0000042.png](https://p0.ssl.qhmsg.com/t014d63e46069ea4d0e.png)
 
 这个是挂载 system 分区，然后删除 `system/framework/` 文件夹，也就是删除了系统框架，可以导致手机变砖。
 
