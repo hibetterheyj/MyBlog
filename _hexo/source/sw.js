@@ -74,8 +74,6 @@
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*).php(.*)", self.toolbox.networkOnly, {
-    });
     self.toolbox.router.get("/(tags|about|gallery|archives|links)(.*)", self.toolbox.networkFirst, {
         cache: {
             name: contentCacheName,
@@ -129,6 +127,10 @@
             maxEntries: maxEntries
         }
     });
+    
+    /* NoCache */
+    self.toolbox.router.get("/sw.js",self.toolbox.networkOnly),
+    self.toolbox.router.get("/(.*).php(.*)", self.toolbox.networkOnly),
 
     /* Precache */
     self.toolbox.precache(['https://m-nfz.b0.upaiyun.com/img/avatar-m.png', 'https://m-nfz.b0.upaiyun.com/img/upyun_logo.svg','https://m-nfz.b0.upaiyun.com/fonts/MaterialIcons-Regular.woff2','http://m-nfz.b0.upaiyun.com/img/unification.png!blogth']);
