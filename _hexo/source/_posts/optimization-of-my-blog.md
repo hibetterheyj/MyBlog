@@ -8,10 +8,10 @@ categories:
 date: 2017-04-23 16:25:00
 updated: 2017-04-23 16:25:00
 toc: false
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/optimization-of-my-blog.png
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/optimization-of-my-blog.png
 ---
 
-![0000087.png](https://img-nfz.b0.upaiyun.com/0000087.png)
+![0000087.png](https://img1.nfz.yecdn.com/0000087.png)
 
 我一直在关注我的博客的浏览体验，其中，网站的加载速度对于浏览体验来说是非常重要的。<!--more-->我见过很多菊苣的博客，他们的博客加载速度却很一般（偷笑）我现在也在写一些 WPO 方面的文章，我并不想在写如何做好优化性能的同时，自己的博客却十分缓慢。
 除了 Pageseed、YSlow 常见提到的颇有些老生常谈的一些优化手段以外，我的博客也用了其它一些零散的优化点。我把它们列举在这里。
@@ -20,7 +20,7 @@ thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/optimization-of-my-blog.p
 
 如果你打开 Dev Tools，你会发现我的博客加载时除了一个用于网站统计的 `piwik.js` 以外，没有再引用任何大段的 css、js。
 
-![0000088.png](https://img-nfz.b0.upaiyun.com/0000088.png)
+![0000088.png](https://img1.nfz.yecdn.com/0000088.png)
 
 这是 `hexo-theme-material` 的一个实验性特性，首次加载利用 XMLHttpRequest 从外部加载资源并异步执行，同时将其存入 localstorage，以后加载都通过 localstorage 加载，不再发起请求。
 这样做的好处有：

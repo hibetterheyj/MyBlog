@@ -9,7 +9,7 @@ categories:
   - 分享镜
 date: 2016-10-01 16:55:00
 updated: 2016-10-01 16:55:00
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/switch-f2fs-file-system-for-android.jpg!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/switch-f2fs-file-system-for-android.jpg!blogth
 ---
 
 F2FS 如今也是折腾 Android 的玩家口中的一个常见词汇。虽然 2014 年起就已经有 ROM 对其提供支持，但是一加发布了原生支持 F2FS 的氢 OS 7.0，和华为重金聘用了 F2FS 文件系统开发人员的新闻，又重新把 F2FS 推上了热点。

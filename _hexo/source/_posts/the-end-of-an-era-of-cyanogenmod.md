@@ -9,7 +9,7 @@ categories:
   - 异闻堂
 date: 2016-12-27 19:15:10
 updated: 2016-12-27 19:15:10
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/the-end-of-an-era-of-cyanogenmod.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/the-end-of-an-era-of-cyanogenmod.png!blogth
 ---
 
 今年的圣诞节礼物非常特殊。CyanogenMod 的主要维护者 ciwrl 于 12 月 25 日将所有机型从服务器上的自动编译列表删除。

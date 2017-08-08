@@ -12,5 +12,5 @@ Header set Cache-Control "max-age=86400"
 
 <FilesMatch "\.(html|htm)$">
 Header always set Content-Type "text/html; charset=utf-8"
-Header add Link "<https://m-nfz.b0.upaiyun.com>; rel=preconnect; crossorigin"
+Header add Link "<https://blog.nfz.yecdn.com>; rel=preconnect; crossorigin"
 </FilesMatch>

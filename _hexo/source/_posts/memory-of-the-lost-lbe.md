@@ -8,7 +8,7 @@ categories:
   - 异闻堂
 date: 2016-09-27 13:12:00
 updated: 2016-09-27 13:12:00
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/memory-of-the-lost-lbe.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/memory-of-the-lost-lbe.png!blogth
 ---
 
 谨以此文向 **北京永杨安风科技有限公司** 和 **LBE 安全大师** 致敬！

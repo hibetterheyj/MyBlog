@@ -7,7 +7,7 @@ categories:
 tags:
   - PWA
   - Web
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/pwa-support-for-my-blog.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/pwa-support-for-my-blog.png!blogth
 ---
 
 > 对于 native app 和 PWA 的纷争我不想发表太多看法，但是有一件事是确定的——PWA 极大改善了移动端用户的体验。
@@ -99,13 +99,13 @@ manifest 文件是一个 JSON 格式的文件，位于你项目的根目录。�
 
 在开发者工具中的 `Application` 选项卡左边有 `Manifest` 选项，你可以验证你的 manifest JSON 文件，并提供了 `Add to homescreen`。执行操作，检查控制台日志是否有报错。
 
-![0000085.png](https://img-nfz.b0.upaiyun.com/0000085.png)
+![0000085.png](https://img1.nfz.yecdn.com/0000085.png)
 
 ## 调试 ServiceWorker
 
 在开发者工具中的 `Application` 选项卡左边的 `Application` 选项中你可以轻松地调试你的 ServiceWorker。
 
-![0000086.png](https://img-nfz.b0.upaiyun.com/0000086.png)
+![0000086.png](https://img1.nfz.yecdn.com/0000086.png)
 
 点击 `Offline`，检查你的离线页面是否正常工作。
 

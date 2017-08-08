@@ -8,7 +8,7 @@ categories:
   - 分享镜
 date: 2016-10-01 11:53:00
 updated: 2017-06-02 21:39:12
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/android-general-root-guidence.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/android-general-root-guidence.png!blogth
 ---
 
 本 Root 教程适用于绝大部分安卓机型。当然，不能解锁 Bootloader，不能刷入第三方 recovery 如 TWRP 的机型不适用。

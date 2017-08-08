@@ -8,7 +8,7 @@ categories:
   - 实验室
 date: 2017-6-18 13:28:00
 updated: 2017-6-18 13:28:00
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/google-analytics-optimize.png
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/google-analytics-optimize.png
 ---
 
 一般地，网站配置 Google An­a­lyt­ics 的常见方式是在网站前端引用 Google Analytics 的 trackercode，然后获取 `analytics.js` 并开始统计用户行为。
@@ -148,7 +148,7 @@ window.__beacon_img.src = '/ga.php' + query;
 
 # 异步方案的性能分析
 
-![](https://img-nfz.b0.upaiyun.com/0000122.png)
+![](https://img1.nfz.yecdn.com/0000122.png)
 
 上图上半部分是使用 Google Analytics 的 Tracker Code 的前端响应速度，下半部分是我使用 PHP 程序异步的 Google Analytics 统计的性能表现。
 

@@ -8,7 +8,7 @@ categories:
 date: 2016-11-20 15:51:00
 updated: 2016-11-20 15:51:00
 toc: false
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/resolve-mutual-exclusion-between-cname-and-mx.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/resolve-mutual-exclusion-between-cname-and-mx.png!blogth
 ---
 
 <!--more-->

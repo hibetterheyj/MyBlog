@@ -8,7 +8,7 @@ categories:
     - 实验室
 date: 2017-03-26 13:01:18
 updated: 2017-06-23 20:56:17
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/speedy-by-service-worker.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/speedy-by-service-worker.png!blogth
 ---
 
 静态内容非常适合做缓存来加速页面的访问，除了使用 CDN 实现加速之外，通过客户端也可以实现更好的访问体验。本文就利用 Service Worker 来探讨基于静态资源的加速方案。
@@ -59,13 +59,13 @@ const ignoreFetch = [
 
 这是第一次访问的效果。
 
-![0000071.png](https://img-nfz.b0.upaiyun.com/0000071.png)
+![0000071.png](https://img1.nfz.yecdn.com/0000071.png)
 
 可以看到，第一次访问不能算太理想，花费 1.39s 才完成了 DOMLoad，所需资源全部加载完实际上花了 1.69s。
 
 > 可以看到，实际上网络资源花费了 3.11s 才加载完。我特意截图了最后加载的几个有齿轮标识的资源。这些是 ServiceWorker 在 `sw.js` 里加载的资源——offline.svg 和 offline.html。
 
-![0000072.png](https://img-nfz.b0.upaiyun.com/0000072.png)
+![0000072.png](https://img1.nfz.yecdn.com/0000072.png)
 
 这是第二次访问的效果。DOMLoad 只花费了 571ms，全部资源加载只需要 608ms。可以看到，很多资源 `from  ServiceWorker`。说明 ServiceWorker 拦截了请求，直接从 ServiceWorker 获得资源。
 
@@ -81,7 +81,7 @@ const ignoreFetch = [
 
 http://caniuse.com/#feat=serviceworkers
 
-![0000073.png](https://img-nfz.b0.upaiyun.com/0000073.png)
+![0000073.png](https://img1.nfz.yecdn.com/0000073.png)
 
 根据 Google 的文档表明，Chorme、Firefox 和 Opera 都支持；Microsoft Edge 现在表示公开支持。Safari 也暗示未来会进行相关开发。
 

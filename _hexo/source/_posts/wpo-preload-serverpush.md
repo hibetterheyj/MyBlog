@@ -9,7 +9,7 @@ categories:
   - 实验室
 date: 2017-6-23 18:17:00
 updated: 2017-6-23 18:17:00
-thumbnail: https://m-nfz.b0.upaiyun.com/img/thumbnails/wpo-preload-serverpush.png!blogth
+thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/wpo-preload-serverpush.png!blogth
 ---
 
 相比使用 Prefetch 之类的技术让浏览器提前准备好将来需要的资源，Preload 是让浏览器在加载页面时提前准备好这个页面所需要的资源。
@@ -101,7 +101,7 @@ document.head.appendChild(preload);
 
 Server Push 是 HTTP2 的一项新特性。当客户端请求 HTML 文件时，服务端同时将其它重要资源随 HTML 在同一个资源中一并发送给用户。这样不仅节省了请求，还避免了重要资源阻塞了页面渲染和加载。
 
-![0000123.png](https://img-nfz.b0.upaiyun.com/0000123.png)
+![0000123.png](https://img1.nfz.yecdn.com/0000123.png)
 
 在目前 W3C 的草案中使用了 Link Preload 响应头标记 Server Push。你可以看到页面响应类似如下所示的 Header：
 
@@ -115,7 +115,7 @@ Link: </app/script.js>; rel=preload; as=script
 
 # 兼容性
 
-![0000123.png](https://img-nfz.b0.upaiyun.com/0000124.png)
+![0000123.png](https://img1.nfz.yecdn.com/0000124.png)
 
 根据 CanIUse 上的数据表明，目前支持 Preload 的浏览器并不多，只占到了 53% 。但是试想在 2015 年、Preload 的草案刚刚出来时、甚至还没有任何浏览器表态支持这项技术，我们不得不感叹 Web 技术的日新月异啊。
 
