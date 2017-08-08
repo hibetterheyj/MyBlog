@@ -70,16 +70,16 @@ background:
 
 # Images Settings
 img:
-    logo: "//m-nfz.b0.upaiyun.com/favicon.png"
-    avatar: "//m-nfz.b0.upaiyun.com/img/avatar-m.png"
-    daily_pic: "//m-nfz.b0.upaiyun.com/img/sidebar.jpg!blogth"
-    sidebar_header: "//m-nfz.b0.upaiyun.com/img/unification.png!blogth"
-    footerico: "//m-nfz.b0.upaiyun.com/img/footer/footer_ico-"
-    random_thumbnail: "//m-nfz.b0.upaiyun.com/img/random/material-"
+    logo: "//blog.nfz.yecdn.com/favicon.png"
+    avatar: "//blog.nfz.yecdn.com/img/avatar-m.png"
+    daily_pic: "//blog.nfz.yecdn.com/img/sidebar.jpg!blogth"
+    sidebar_header: "//blog.nfz.yecdn.com/img/unification.png!blogth"
+    footerico: "//blog.nfz.yecdn.com/img/footer/footer_ico-"
+    random_thumbnail: "//blog.nfz.yecdn.com/img/random/material-"
     footer_image:
         upyun_logo:
             link: "https://www.upyun.com/"
-            src: '//m-nfz.b0.upaiyun.com/img/upyun_logo.svg'
+            src: '//blog.nfz.yecdn.com/img/upyun_logo.svg'
 
 # Custom Fonts
 #   family: the font-family which will be used in the theme
