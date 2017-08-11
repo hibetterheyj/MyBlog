@@ -59,19 +59,19 @@ Prefetching 有两种用法。其中 `prefetch` 为将来的页面提供了一�
 
 http://caniuse.com/#feat=link-rel-dns-prefetch
 
-![0000074.png](https://img1.nfz.yecdn.com/0000074.png)
+![0000074.png](https://img2.nfz.yecdn.com/2017/08/12/598de00e15608.png)
 
 - Preconnect
 
 http://caniuse.com/#feat=link-rel-preconnect
 
-![0000075.png](https://img1.nfz.yecdn.com/0000075.png)
+![0000075.png](https://img2.nfz.yecdn.com/2017/08/12/598ddfc03e5d8.png)
 
 - Prefetching
 
 http://caniuse.com/#feat=link-rel-prefetch
 
-![0000076.png](https://img1.nfz.yecdn.com/0000076.png)
+![0000076.png](https://img2.nfz.yecdn.com/2017/08/12/598de04836040.png)
 
 > 连 IE 都支持了，Safari 和 iOS 你个辣鸡~
 
@@ -79,7 +79,7 @@ http://caniuse.com/#feat=link-rel-prefetch
 
 http://caniuse.com/#feat=subresource-integrity
 
-![0000077.png](https://img1.nfz.yecdn.com/0000077.png)
+![0000077.png](https://img2.nfz.yecdn.com/2017/08/12/598de070a7773.png)
 
 # 实际意义
 

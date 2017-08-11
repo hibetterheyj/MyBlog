@@ -31,6 +31,13 @@
         }
     });
     self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
+        origin: /img2\.nfz\.yecdn\.com/,
+        cache: {
+            name: staticImageCacheName,
+            maxEntries: maxEntries
+        }
+    });
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /ooo\.0o0\.ooo/,
         cache: {
             name: staticImageCacheName,
