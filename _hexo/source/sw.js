@@ -73,6 +73,13 @@
             maxEntries: maxEntries
         }
     });
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
+        origin: /cdnjs\.cat\.net/,
+        cache: {
+            name: staticAssetsCacheName,
+            maxEntries: maxEntries
+        }
+    });
 
     /* ContentCache */ 
     self.toolbox.router.get("/archives/(.*).html(.*)", self.toolbox.networkFirst, {

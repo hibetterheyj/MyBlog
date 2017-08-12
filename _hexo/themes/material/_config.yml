@@ -283,9 +283,9 @@ vendors:
 #   For example
 #       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
     # jQuery 2.2.0
-    jquery:
+    jquery: https://cdnjs.cat.net/ajax/libs/jquery/2.2.0/jquery.min.js
     # nprogress 0.2.0
-    nprogress:
+    nprogress: https://cdnjs.cat.net/ajax/libs/nprogress/0.2.0/nprogress.min.js
     # FontAwesome 4.5.0
     fontawesome:
     # MathJax 2.7.0-2.7.1
