@@ -74,5 +74,3 @@ pages:
 - 目前使用完全免费
 - 可以和 Gitlab 的 Repository 无缝兼容，无需第三方 CI 平台接入。
 - 支持在 `hexo deploy` 的同时自动发布到 Gitlab Pages
-
-> ~~同时借助这个机会，我也利用 CloudXNS 将国外用户解析到 Gitlab Pages，为我的香港 CDN 分流减压，也可以加快使用代理服务的浏览者访问我博客的加载速度。~~ 取消了，香港的网络环境算不错的，全球访问都不差，所以没有再部署  Gitlab 的 Pages。
