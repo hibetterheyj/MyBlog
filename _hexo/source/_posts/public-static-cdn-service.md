@@ -6,7 +6,7 @@ tags:
 categories:
   - 分享镜
 date: 2017-7-10 15:17:00
-updated: 2017-7-24 17:01:00
+updated: 2017-8-12 1:11:00
 description: 前端公共库 CDN 服务是指一些服务商将我们常用的前端开发用到的库存放到网上，方便开发者直接调用，并且提供 CDN 加速。与将前端库存放在自己的服务器上相比，公共库的 CDN 更加稳定、高速，一来可以方便开发者的开发，二来可以让用户加速访问这些资源。
 ---
 
@@ -52,10 +52,11 @@ BaomituCDN 是奇虎 360 最大的前端团队奇舞团维护的前端开源公�
 - HTTPS：支持
 - HTTP2：支持
 - 官网：[css.net](https://css.net)
-- CDN 资源域名：cdn.css.net
+- CDN 资源域名：cdnjs.cat.net 等
+- 介绍：[SB.SB/css-cdn/](https://sb.sb/css-cdn/)
 
-CSS.NET 是土豪 Showfom 提供的公益前端 CDN 服务，每天同步 CDNJS 和 jsDeliver 的 GitHub。
-当面对全网加速的需求时，CDN 和 BGP 成为了两个极端。如果说前面几家前端公共库选择了 CDN，那么 Showfom 的选择是另一个极端——BGP。cdn.css.net 只解析了国内和北美的各一台服务器，其中国内的是位于浙江阿里云 BGP 机房，同时接入了 8 条运营商线路；海外的是 SUCURI CDN（IP 任播），全球路由畅通。CSS.NET 的整体速度和延迟都很不赖，就是需要担心如果公共库单点宕机带来的加载问题。
+CSS.NET 是土豪 Showfom 提供的公益前端 CDN 服务，每天同步 CDNJS~~和 jsDeliver~~的 GitHub。jsDelivr 由于有国内和网宿合作的节点，css.net 已经不再同步。
+~~当面对全网加速的需求时，CDN 和 BGP 成为了两个极端。如果说前面几家前端公共库选择了 CDN，那么 Showfom 的选择是另一个极端——BGP。cdn.css.net 只解析了国内和北美的各一台服务器，其中国内的是位于浙江阿里云 BGP 机房，同时接入了 8 条运营商线路~~兽兽 dalao 亲自来博客评论区了(⁄ ⁄•⁄ω⁄•⁄ ⁄)，现在 css.net 的架构改成了国内是阿里云 CDN，海外是 SUCURI CDN（IP 任播），全球路由畅通。CSS.NET 的整体速度和延迟都很不赖~~，就是需要担心如果公共库单点宕机带来的加载问题~~。
 
 # Staticfile
 
@@ -88,7 +89,7 @@ Staticfile 是七牛提供的公共 CDN 服务，由掘金提供的技术支持�
 - 官网：[www.jsdeliver.com](https://www.jsdelivr.com/)
 - CDN 资源域名：cdn.jsdelivr.net
 
-也是一家公共 CDN 巨头，除了拥有自有库、支持文件合并以外，还支持从 NPM 上获得资源。而且 jsDeliver 域名还在国内备了案。提供海外 CDN 服务的是 CloudFlare，提供国内 CDN 服务的是 CloudFlare 国内版（但是节点不是百度的而是网宿的）。虽然有国内节点，但是我还是推荐使用国内同步 jsDeliver 的公共库，因为 jsDeliver 的 DNS 不够智能，还是偶尔会有国内一些地区被解析到 CloudFlare 海外节点上。
+也是一家公共 CDN 巨头，除了拥有自有库、支持文件合并以外，还支持从 NPM 上获得资源。jsDeliver 域名还在国内备了案。提供海外 CDN 服务的是 CloudFlare，提供国内 CDN 服务的是 CloudFlare 国内版（但是看介绍说，节点是网宿的）。虽然有国内节点，但是我还是推荐使用国内同步 jsDeliver 的公共库，因为 jsDeliver 用的域名解析不够智能，还是偶尔会有国内一些地区被解析到 CloudFlare 海外节点上。
 
 # UNPKG
 
