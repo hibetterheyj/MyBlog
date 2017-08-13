@@ -30,7 +30,7 @@ updated: 2017-8-14 1:21:00
   - `wx1.sinaimg.cn` `wx2.sinaimg.cn` `wx3.sinaimg.cn` `wx4.sinaimg.cn`
   - `ws1.sinaimg.cn` `ws2.sinaimg.cn` `ws3.sinaimg.cn` `ws4.sinaimg.cn`
   - 等等等等。。。。
-  
+ 
 - [上传地址](http://photo.weibo.com/photos/upload)
 - [Chrome 插件](https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf/related)
 
@@ -38,7 +38,7 @@ updated: 2017-8-14 1:21:00
 
 ## imgur
 
-这是一家老牌的国外图床，据说 2009 年就开始运行了。图片存储稳定可靠。
+这是一家著名的老牌国外图床，2009 年就开始运行了。图片存储稳定可靠。
 
 - 速度：国外真的挺快，不过国内半墙
 - CDN：FastlyCDN（这家 CDN 的很多节点都被墙了）
@@ -46,7 +46,7 @@ updated: 2017-8-14 1:21:00
 - 域名：`i.imgur.com`
 - [上传地址](https://imgur.com)
 
-> 追求国内访问速度的还是别用了吧。
+> 追求国内访问速度的还是别用了吧。不过这家图床是真的足够稳定可靠。开放有 API（有免费匿名 ClientKey 可以申请）。
 
 ## sm.ms 图床
 
@@ -58,7 +58,7 @@ updated: 2017-8-14 1:21:00
 - 域名：`ooo.0o0.ooo` `i.loli.net`
 - [上传地址](https://sm.ms)
 
-> 支持 API 操作，图片存储非常可靠，V2EX 钦点的图床。iOS 和 Android 应用即将开发完毕，甚至有第三方做的 Telegram Bot。
+> 支持 API 操作，图片存储非常可靠，V2EX 钦点的图床。iOS 和 Android 应用即将开发完毕，甚至有第三方做的 Telegram Bot，众多公共图床中最看好它和 imgur。
 
 ## V2EX 图床
 
@@ -70,14 +70,14 @@ updated: 2017-8-14 1:21:00
 - 域名：`i.v2ex.co`
 - [上传地址](https://www.v2ex.com/i)
 
-> V2 图床需要付费使用可能会使一些人望而却步，不过也可以避免被滥用。
+> V2 图床需要付费才能解锁使用可能会使一些人望而却步，不过这样可以避免被滥用，所以 V2 图床质量还是挺高的。
 > 我把必须保证高度可靠外链的图片托管在上面，比如我的友链信息提供的供大家调用的头像和 favicon，都托管在 V2 图床。
 
 ## 贴图库
 
 这个图床曾经被严重滥用，几年前还承诺免费，如今想要长期保存图片已经需要付费了。
 
-- 速度：国内足够快，国外速度很一般
+- 速度：国内还是足够快的，国外速度很一般
 - CDN：~~之前用过百度云加速 CDN，现在接入了 CloudXNS 牛盾 CDN 和五五互联的 CDN 服务~~现在又重新启用百度云加速了
 - HTTPS：~~支持~~现在重新接入了百度云加速以后没有启用 HTTPS，怕是为了降低运营成本。
 
@@ -94,13 +94,13 @@ updated: 2017-8-14 1:21:00
 
 ONJI 图床的架构很特殊。~~这个图床有两种使用方式~~现在只剩下一种了。
 
-- ~~在 [pic.onji.cn](https://pic.onji.cn) 上上传图片，获得链接~~
+- ~~在 [pic.onji.cn](https://pic.onji.cn) 上上传图片，获得链接 ~~
 - 事先将图片上传到安全可靠的位置，然后使用 API URI：`https://api.onji.cn/img/?url=<原图片的 URL>` 加载图片。
 
 > ~~这个图床的架构是，将用户的图片上传到贴吧或者新浪微博的图床（指第一种使用方法）、或者~~用户自己将图片存储在安全可靠、外网可直接访问的地方，并把原图地址填入 API URL；后端会将图片抓取下来分发、缓存到 CDN 上。
 > ~~由于第一种方法相当于将图片交到百度或者渣浪手里，所以也需要谨慎。~~
 
-由于这个图床被滥用，站长把图床关闭了，不过图片抓取和分发的 API 还可以继续使用，大家且用且珍惜吧。
+由于这个图床被滥用，站长把第一种使用方式关闭了。目前图片抓取和分发的 API 还可以继续使用，大家且用且珍惜吧。
 
 ## VIM-CN 图床（elimage）
 
@@ -125,13 +125,13 @@ V2EX 上的介绍说最早是为了收集一些网络图片作为大数据分析
 
 ## PostImage
 
-- 速度：国外速度杠杠的，国内别被墙就好，
+- 速度：国外速度杠杠的，国内别被墙就好
 - CDN：AdvancedHosted CDN
 - HTTPS：支持
 - 域名：`s1.postimg.org` `s2.postimg.org` 等。
 - [上传地址](https://postimages.org)
 
-PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传图。这个图床也比较靠谱，不过用的 CDN 服务商并不是太有名。访客以来自国内为主的还是那句话：这个图床最好别用。
+PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传图。这个图床用的 CDN 服务商不太有名。
 
 ## UPLOAD.CC
 
@@ -141,7 +141,7 @@ PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传
 - 域名：`upload.cc`。
 - [上传地址](https://upload.cc)
 
-这个图床是香港人开的，TOS 写的挺详细的。提供了 Android 版 APP（Google Play 上可下载）、Chrome 和 Firefox 的插件，还是挺方便的，看来是真心想运营一个图床。
+这个图床是香港人开的，TOS 写的挺详细的。提供了 Android 版 APP（Google Play 上可下载），还提供有 Chrome 和 Firefox 的插件，挺方便的。
 
 ## ImgSafe
 
@@ -151,7 +151,7 @@ PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传
 - 域名：`i.imgsafe.org`。
 - [上传地址](https://imgsafe.org)
 
-国外一家图床，网站首页有写着累计图片上传数目。不过 *据说* 偶尔会有发生图片丢失的情况；大家自己权衡一下吧。
+国外一家图床，网站首页有写着累计图片上传数目。不过 *据说* 偶尔会发生图片丢失的情况；大家自己权衡一下吧。还有要注意的就是这个图床仅能通过拖动的方式上传图片，所以手机上就没法传图了。
 
 ## ImgBox
 
@@ -161,7 +161,7 @@ PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传
 - 域名：`i.imgbox.com`。
 - [上传地址](https://imgbox.com)
 
-虽然用的服务器很一般，但是毕竟也是一家国外老牌图床了，自 2010 年起开始运营，已经托管了上百万张图片；还是令人放心的。
+虽然用的服务器挺一般，但是毕竟也是一家国外老牌图床了，自 2010 年起开始运营以来已经托管了上百万张图片，看起来还是令人放心的。
 
 # 非“公共”的图床
 
