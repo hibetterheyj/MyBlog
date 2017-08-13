@@ -121,21 +121,21 @@
         origin: /disqus\.com/,
     });
     self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
-        origin: /c\.disquscdn\.com/,
+        origin: /disquscdn\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
     self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
-        origin: /uploads\.disquscdn\.com/,
+        origin: /referrer\.disqus\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
     self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
-        origin: /(referrer\.disqus\.com|ssl\.google-analytics\.com)/,
+        origin: /(www\.google-analytics\.com|ssl\.google-analytics\.com)/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
@@ -147,7 +147,7 @@
     self.toolbox.router.get("/(.*).php(.*)", self.toolbox.networkOnly),
 
     /* Precache */
-    self.toolbox.precache(['https://blog.nfz.yecdn.com/img/avatar-m.png', 'https://blog.nfz.yecdn.com/img/upyun_logo.svg','https://blog.nfz.yecdn.com/fonts/MaterialIcons-Regular.woff2','https://blog.nfz.yecdn.com/img/unification.png!blogth']);
+    self.toolbox.precache(['https://blog.nfz.yecdn.com/img/avatar-m.png', 'https://blog.nfz.yecdn.com/img/upyun_logo.svg','https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff2','https://blog.nfz.yecdn.com/img/unification.png!blogth']);
 
     self.addEventListener("install",
     function(event) {
