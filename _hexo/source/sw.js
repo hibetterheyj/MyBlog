@@ -1,5 +1,5 @@
 "use strict"; (function() {
-    var cacheVersion = "-170801";
+    var cacheVersion = "-170816";
     var staticImageCacheName = "static-image" + cacheVersion;
     var staticAssetsCacheName = "static-assets" + cacheVersion;
     var contentCacheName = "content" + cacheVersion;
@@ -7,7 +7,7 @@
     var maxEntries = 100;
     self.importScripts("https://cdnjs.cat.net/ajax/libs/sw-toolbox/3.6.1/sw-toolbox.js");
     self.toolbox.options.debug = false;
-    self.toolbox.options.networkTimeoutSeconds = 4;
+    self.toolbox.options.networkTimeoutSeconds = 3;
     /* staticImageCache */
     self.toolbox.router.get("/img/(.*)", self.toolbox.fastest, {
         origin: /blog\.nfz\.yecdn\.com/,
