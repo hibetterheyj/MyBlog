@@ -60,7 +60,7 @@ updated: 2017-8-14 1:21:00
 - 域名：`ooo.0o0.ooo` `i.loli.net`
 - [上传地址](https://sm.ms)
 
-> 支持 API 操作，图片存储非常可靠，V2EX 钦点的图床。iOS 和 Android 应用~~即将开发完毕~~ 已经分别上架 iTunes 和 Play Store，甚至有第三方做的 Telegram Bot，众多公共图床中最看好它和 imgur。
+> 支持 API 操作，图片存储非常可靠，V2EX 钦点的图床。iOS 和 Android 应用~~即将开发完毕~~ 已经分别上架 [iTunes](https://itunes.apple.com/app/sm-ms/id1268411917) 和 [Play Store](https://play.google.com/store/apps/details?id=sm.ms)，甚至有第三方做的 Telegram Bot。在众多公共图床中最看好它和 imgur。
 
 ## V2EX 图床
 
