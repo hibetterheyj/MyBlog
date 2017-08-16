@@ -6,8 +6,10 @@ tags:
 categories:
   - 实验室
 date: 2016-12-20 20:06:42
+updated: 2017-8-16 1:06:17
 thumbnail: https://blog.nfz.yecdn.com/img/thumbnails/android-captive-portal-min.png!blogth
 ---
+
 从 Android L 开始，原生和 CM 的 ROM 用户就会发现，状态栏的网络信号莫名多了一个感叹号。而且，有的时候明明连着 WIFI 用得好好的，却突然跳到数据流量。
 
 <!--more-->
@@ -87,11 +89,18 @@ adb shell "settings delete global captive_portal_use_https"
 
 同时也默认要求使用 HTTPS 的方法进行验证。禁用和恢复 HTTPS 检查的方法同 [Android 7.0 ~ 7.1.0](#Android-7-0-7-1-0) 的方法。
 
+在 Android 7.1+ 上配置 Captive Portal 地址需要两行指令：
+
+```
+adb shell "settings put global captive_portal_http_url http://yourdomain"; 
+adb shell "settings put global captive_portal_https_url https://]]yourdomain";
+```
+
 ## 手机端应用
 
 [小狐狸](www.noisyfox.cn)开发了这款“叹号杀手”应用实现了这个：[酷安下载地址](http://www.coolapk.com/apk/org.foxteam.noisyfox.noexclamation)
 
-用这款应用可以快速设置禁用验证或者更换验证地址。可能需要root，如果没root可能会导致修改失败。
+用这款应用可以快速设置禁用验证或者更换验证地址。~~可能~~需要 root，如果没 root ~~可能~~会导致修改失败。
 
 # 架设自己的验证服务
 
@@ -99,7 +108,7 @@ adb shell "settings delete global captive_portal_use_https"
 
 ## Apache
 
-开启Rewrite模块（大部分虚拟主机商都会帮你开好），在`.htaccess`文件中最末写入以下值：
+开启Rewrite模块（大部分虚拟主机商都会帮你开好），在 `.htaccess` 文件中最末写入以下值：
 
 ```apacheconf
 <IfModule mod_rewrite.c>
@@ -117,16 +126,19 @@ location /generate_204 { return 204; }
 ```
 ## Workaround
 
-如果你没有服务器（比如你只用pages服务），或者上述设置方法全部无效，还有一个workaround的方法——直接建立一个名字叫做“generate_204”的空文件，因为空文件也会被Android当做是204返回（毕竟空文件绝对不会是网络登录验证咯）
+~~如果你没有服务器（比如你只用pages服务），或者上述设置方法全部无效，还有一个workaround的方法——直接建立一个名字叫做“generate_204”的空文件，因为空文件也会被Android当做是204返回（毕竟空文件绝对不会是网络登录验证咯）~~ 经测试，这种方法已经不能生效了。
 
 ## 验证服务地址
 
-- www.qualcomm.com（高通）
-- noisyfox.cn（小狐狸）
-- www.v2ex.com（V2EX）
-- bbs.mfunz.com（魔趣开源项目）
-- g.cn（谷歌中国，一个不存在的网站）
-- developer.google.cn（谷歌开发者文档中国）
+- www.qualcomm.com/generate_204（高通）
+- noisyfox.cn/generate_204（小狐狸）
+- ~~www.v2ex.com~~（V2EX 旧 Captive 地址，已弃用）
+- captive.v2ex.co/generate_204（V2EX 新 Captive 地址）
+- ~~bbs.mfunz.com~~（魔趣开源项目，已弃用）
+- g.cn/generate_204（谷歌中国，一个不存在的网站）
+- google.cn
+- developer.google.cn/generate_204（谷歌开发者文档中国）
+- http204.sinaapp.com/generate_204（Tink 提供，运行在 SAE 上）
 
 # 分析 NetWorkMonitor 的工作原理
 
@@ -178,7 +190,7 @@ public boolean processMessage(Message message) {
             } else {
 ```
 
-当安卓设备联网后，如果该网络是 VPN，那么直接使用这个网络进行连接，否则调用`isCaptivePortal()`函数进行网络状况的判定，再根据判定结果决定是否选用此网络。这个函数就会先访问系统内指定的网址并根据返回结果来判断网络状况，而这个网址如字面所说，会产生一个 204 返回值。204返回值的意思就是空内容。如果当WiFi是需要登录才可以连接，那么当试图访问google的服务器WiFi的链接就一定会自动跳转到一个登录页面，这个时候http请求的返回值就必然不是204了。就是通过这一机制，便可以区分当前 WiFi 是否需要验证，不得不佩服想出这个办法的人来。
+当安卓设备联网后，如果该网络是 VPN，那么直接使用这个网络进行连接，否则调用 `isCaptivePortal()` 函数进行网络状况的判定，再根据判定结果决定是否选用此网络。这个函数就会先访问系统内指定的网址并根据返回结果来判断网络状况，而这个网址如字面所说，会产生一个 204 返回值。204 返回值的意思就是空内容。如果当 WiFi 是需要登录才可以连接，那么当试图访问 google 的服务器的链接就一定会自动跳转到一个登录页面，这个时候 http 请求的返回值就必然不是 204。就是通过这一机制，便可以区分当前 WiFi 是否需要验证，不得不佩服想出这个办法的人来。
 
 ## Android 7.0-7.1.0
 
